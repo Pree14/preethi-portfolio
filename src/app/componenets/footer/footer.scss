@@ -1,0 +1,8 @@
+.social-icons a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107; // Bootstrap warning color on hover
+}
