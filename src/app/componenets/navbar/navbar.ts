@@ -8,4 +8,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar {
+  pdfDownload(){
+    window.open('assets/Preethi_AngularDeveloper_wrong.pdf', '_blank');
+  }
+}

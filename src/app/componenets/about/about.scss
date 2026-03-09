@@ -1,0 +1,40 @@
+.about-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #0e67a6;
+  display: block;
+  margin-top: 8px;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.lead-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #0e67a6;
+  font-weight: 600;
+}

@@ -1,0 +1,25 @@
+.nav-link-minimal {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link-minimal:hover {
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.sidebar {
+  width: 220px;
+  min-width: 220px;  
+  max-width: 220px;  
+  flex: 0 0 220px; 
+  background-color: #bcb8b1; 
+}
+
+.nav-link{
+  // color: #003459;
+  color: #0e67a6;
+}

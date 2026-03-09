@@ -1,0 +1,49 @@
+.projects-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #0e67a6;
+  display: block;
+  margin: 8px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-subtitle {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.project-list {
+  padding-left: 18px;
+}
+
+.project-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}

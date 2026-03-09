@@ -1,16 +1,13 @@
 <div class="d-flex flex-column min-vh-100">
-  <!-- Navbar at top -->
+
   <app-navbar></app-navbar>
 
-  <!-- Main content area -->
+  <!-- Sidebar + Content -->
   <div class="d-flex flex-grow-1">
-    <!-- Sidebar -->
-    <aside class="bg-light p-3" style="width: 220px;">
+
+    <aside class="sidebar bg-light p-3">
       <h5>Sections</h5>
       <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">Introduction</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about" routerLinkActive="active">About Me</a>
         </li>
@@ -21,23 +18,46 @@
           <a class="nav-link" routerLink="/skills" routerLinkActive="active">Skills & Tools</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">Experience</a>
+          <a class="nav-link" routerLink="/experience" routerLinkActive="active">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">Education</a>
+          <a class="nav-link" routerLink="/education" routerLinkActive="active">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">Contact</a>
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
         </li>
       </ul>
     </aside>
 
-    <!-- Main content -->
-    <main class="flex-grow-1 p-4">
-      <router-outlet></router-outlet>
+    <main class="flex-grow-1 p-4 d-flex flex-column">
+
+      <div class="flex-grow-1">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-5"
+           *ngIf="previousPage || nextPage">
+
+        <div *ngIf="previousPage">
+          <a [routerLink]="previousPage.path" class="nav-link-minimal">
+            <i class="bi bi-chevron-left me-1"></i>
+            {{ previousPage.label }}
+          </a>
+        </div>
+
+        <div *ngIf="nextPage" class="ms-auto">
+          <a [routerLink]="nextPage.path" class="nav-link-minimal">
+            {{ nextPage.label }}
+            <i class="bi bi-chevron-right ms-1"></i>
+          </a>
+        </div>
+
+      </div>
+
     </main>
+
   </div>
 
-  <!-- Footer -->
   <app-footer></app-footer>
+
 </div>

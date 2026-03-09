@@ -1,0 +1,57 @@
+.contact-section {
+  background-color: #ffffff;
+}
+
+.contact-title {
+  font-weight: 700;
+  font-size: 32px;
+    position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #0e67a6;
+  display: block;
+  margin: 8px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.custom-alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+}
+
+/* Success */
+.success-alert {
+  color: #2e7d32;
+  border-color: #4caf50;
+  background: #e8f5e9;
+}
+
+/* Error */
+.error-alert {
+  color: #c62828;
+  border-color: #ef5350;
+  background: #fdecea;
+}

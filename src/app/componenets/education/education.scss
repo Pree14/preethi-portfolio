@@ -1,0 +1,94 @@
+.education-section {
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+    position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #0e67a6;
+  display: block;
+  margin: 8px;
+}
+
+.education-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.degree-title {
+  font-weight: 600;
+}
+
+.college-name {
+  color: #0e67a6;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.education-details {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.edu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edu-badge i {
+  color: #0e67a6;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 30px;
+  border-left: 3px solid #0e67a6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -44px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: #0e67a6;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -44px;
+  top: 3px;
+  font-size: 18px;
+  color: #0e67a6;
+  background: #ffffff;
+  padding: 4px;
+  border-radius: 50%;
+}
