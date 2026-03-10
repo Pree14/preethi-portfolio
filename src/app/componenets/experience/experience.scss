@@ -1,5 +1,6 @@
 .experience-section {
-  background-color: #f8f9fa;
+  // background-color: #f8f9fa;
+  background-color: var(--bg-color);
 }
 
 .section-title {
@@ -12,15 +13,16 @@
   content: '';
   width: 60px;
   height: 3px;
-  background: #0e67a6;
+  background: var(--highlight-color);
   display: block;
   margin: 8px;
 }
 
 .experience-card {
-  background: #ffffff;
+  // background: #ffffff;
+  background-color: var(--card-bg);
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-color);
   transition: 0.3s ease;
   position: relative;
 }
@@ -44,12 +46,12 @@
 .duration {
   font-size: 14px;
   // color: gray;
-  color: #0e67a6;
+  color: var(--highlight-color);
 }
 
 .role-title {
   font-weight: 500;
-  color: #0e67a6;
+  color: var(--highlight-color);
   margin-bottom: 15px;
 }
 

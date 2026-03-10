@@ -1,0 +1,27 @@
+.navbar {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: var(--navbar-shadow) !important;
+    border-bottom: var(--navbar-border) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--text-color) !important;
+}
+
+.theme-toggle {
+  border: none;
+  background: var(--card-bg);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 50px;
+  transition: 0.3s;
+  color: var(--text-color);
+}
+
+.theme-toggle:hover {
+  background: var(--highlight-color);
+  color: var(--text-color);
+}

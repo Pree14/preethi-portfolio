@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+/* Light Theme (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  // --card-bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --primary-color: #4f46e5;
+  --hover-color: #dfecf3;
+  --highlight-color: #0e67a6;
+  --shadow-color: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --navbar-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --navbar-border: rgba(0,0,0,0.08);
+}
+
+/* Dark Theme */
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --primary-color: #6366f1;
+  --hover-color: #8297a4;
+  --highlight-color: #0e67a6;
+  --shadow-color: 0 8px 20px rgba(0, 0, 0, 0.8);
+  --navbar-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  --navbar-border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+button {
+  background-color: var(--primary-color);
+}
+
+.theme-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--card-bg) inset !important;
+  -webkit-text-fill-color: var(--text-color) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input {
+  color: var(--text-color);
+}

@@ -1,5 +1,6 @@
 .skills-section {
-  background-color: #f8f9fa;
+  // background-color: #f8f9fa;
+  background-color: var(--bg-color);
 }
 
 .section-title {
@@ -12,7 +13,7 @@
   content: '';
   width: 60px;
   height: 3px;
-  background: #0e67a6;
+  background: var(--highlight-color);
   display: block;
   margin: 8px;
 }
@@ -32,10 +33,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
+  // background: #ffffff;
+  background-color: var(--bg-color);
   padding: 10px 16px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-color);
   transition: 0.3s ease;
   font-size: 14px;
   font-weight: 500;
@@ -52,9 +54,10 @@
 }
 
 .skill-card {
-  background: #ffffff;
+  // background: #ffffff;
+  background-color: var(--card-bg);
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-color);
   transition: 0.3s ease;
   position: relative;
   padding: 30px;

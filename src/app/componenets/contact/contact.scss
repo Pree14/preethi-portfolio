@@ -1,5 +1,6 @@
 .contact-section {
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  background-color: var(--bg-color);
 }
 
 .contact-title {
@@ -12,7 +13,7 @@
   content: '';
   width: 60px;
   height: 3px;
-  background: #0e67a6;
+  background: var(--highlight-color);
   display: block;
   margin: 8px;
 }
@@ -31,6 +32,10 @@ textarea.ng-invalid.ng-touched {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  box-shadow: var(--shadow-color);
+  padding: 30px 30px 30px 30px;
+  background-color: var(--card-bg);
+  border-radius: 14px;
 }
 
 .custom-alert {
@@ -54,4 +59,14 @@ textarea.ng-invalid.ng-touched {
   color: #c62828;
   border-color: #ef5350;
   background: #fdecea;
+}
+
+.form-control {
+  box-shadow: var(--shadow-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: var(--text-color);
 }
