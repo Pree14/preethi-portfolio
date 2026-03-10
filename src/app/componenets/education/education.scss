@@ -1,98 +1,157 @@
-.education-section {
-  // background-color: #ffffff;
-  background-color: var(--bg-color);
+.education-section{
+  background-color:var(--bg-color);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 32px;
-    position: relative;
+/* SECTION TITLE */
+
+.section-title{
+  font-weight:700;
+  font-size:32px;
+  position:relative;
 }
 
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: var(--highlight-color);
-  display: block;
-  margin: 8px;
+.section-title::after{
+  content:'';
+  width:60px;
+  height:3px;
+  background:var(--highlight-color);
+  display:block;
+  margin-top:8px;
 }
 
-.education-card {
-  // background: #f8f9fa;
-  background-color: var(--card-bg);
-  border-radius: 14px;
-  box-shadow: var(--shadow-color);
-  transition: 0.3s ease;
+/* CARD */
+
+.education-card{
+  background-color:var(--card-bg);
+  border-radius:14px;
+  box-shadow:var(--shadow-color);
+  transition:transform 0.3s ease;
 }
 
-.education-card:hover {
-  transform: translateY(-5px);
+.education-card:hover{
+  transform:translateY(-5px);
 }
 
-.degree-title {
-  font-weight: 600;
+/* TEXT */
+
+.degree-title{
+  font-weight:600;
 }
 
-.college-name {
-  color: var(--highlight-color);
-  font-weight: 500;
-  margin-top: 8px;
+.college-name{
+  color:var(--highlight-color);
+  font-weight:500;
+  margin-top:8px;
 }
 
-.education-details {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+/* BADGES */
+
+.education-details{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
-.edu-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  // background: #ffffff;
-  background-color: var(--bg-color);
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  box-shadow: var(--shadow-color);
+.edu-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background-color:var(--bg-color);
+  padding:6px 12px;
+  border-radius:8px;
+  font-size:14px;
+  box-shadow:var(--shadow-color);
 }
 
-.edu-badge i {
-  color: var(--highlight-color);
+.edu-badge i{
+  color:var(--highlight-color);
 }
 
-.timeline {
-  position: relative;
-  margin-left: 20px;
-  padding-left: 30px;
-  border-left: 3px solid #0e67a6;
+/* TIMELINE */
+
+.timeline{
+  position:relative;
+  margin-left:20px;
+  padding-left:30px;
+  border-left:3px solid #0e67a6;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 40px;
+.timeline-item{
+  position:relative;
+  margin-bottom:35px;
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -44px;
-  top: 5px;
-  width: 16px;
-  height: 16px;
-  background: var(--highlight-color);
-  border-radius: 50%;
-  border: 3px solid #ffffff;
+/* ICON */
+
+.timeline-icon{
+  position:absolute;
+  left:-44px;
+  top:5px;
+  font-size:18px;
+  color:var(--highlight-color);
+  background-color:var(--bg-color);
+  padding:5px;
+  border-radius:50%;
 }
 
-.timeline-icon {
-  position: absolute;
-  left: -44px;
-  top: 3px;
-  font-size: 18px;
-  color: var(--highlight-color);
-  // background: #ffffff;
-  background-color: var(--bg-color);
-  padding: 4px;
-  border-radius: 50%;
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+
+@media (max-width:992px){
+
+  .section-title{
+    font-size:28px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .section-title{
+    font-size:24px;
+  }
+
+  .education-card{
+    padding:22px;
+  }
+
+  .degree-title{
+    font-size:18px;
+  }
+
+  .college-name{
+    font-size:16px;
+  }
+
+  .edu-badge{
+    font-size:13px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .timeline{
+    margin-left:10px;
+    padding-left:20px;
+  }
+
+  .timeline-icon{
+    left:-34px;
+    font-size:16px;
+  }
+
+  .degree-title{
+    font-size:16px;
+  }
+
+  .college-name{
+    font-size:14px;
+  }
+
 }

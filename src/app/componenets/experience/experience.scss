@@ -1,65 +1,125 @@
-.experience-section {
-  // background-color: #f8f9fa;
-  background-color: var(--bg-color);
+.experience-section{
+  background-color:var(--bg-color);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 32px;
-  position: relative;
+/* SECTION TITLE */
+
+.section-title{
+  font-weight:700;
+  font-size:32px;
+  position:relative;
 }
 
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: var(--highlight-color);
-  display: block;
-  margin: 8px;
+.section-title::after{
+  content:'';
+  width:60px;
+  height:3px;
+  background:var(--highlight-color);
+  display:block;
+  margin-top:8px;
 }
 
-.experience-card {
-  // background: #ffffff;
-  background-color: var(--card-bg);
-  border-radius: 14px;
-  box-shadow: var(--shadow-color);
-  transition: 0.3s ease;
-  position: relative;
+/* EXPERIENCE CARD */
+
+.experience-card{
+  background-color:var(--card-bg);
+  border-radius:14px;
+  box-shadow:var(--shadow-color);
+  transition:transform 0.3s ease;
 }
 
-.experience-card:hover {
-  transform: translateY(-6px);
+.experience-card:hover{
+  transform:translateY(-6px);
 }
 
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+/* HEADER */
+
+.experience-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
-.company-name {
-  font-weight: 600;
-  margin-bottom: 0;
+.company-name{
+  font-weight:600;
+  margin:0;
 }
 
-.duration {
-  font-size: 14px;
-  // color: gray;
-  color: var(--highlight-color);
+.duration{
+  font-size:14px;
+  color:var(--highlight-color);
 }
 
-.role-title {
-  font-weight: 500;
-  color: var(--highlight-color);
-  margin-bottom: 15px;
+/* ROLE */
+
+.role-title{
+  font-weight:500;
+  color:var(--highlight-color);
+  margin-bottom:15px;
 }
 
-.experience-list {
-  padding-left: 18px;
+/* LIST */
+
+.experience-list{
+  padding-left:18px;
 }
 
-.experience-list li {
-  margin-bottom: 10px;
-  font-size: 14px;
+.experience-list li{
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+
+@media (max-width:992px){
+
+  .section-title{
+    font-size:28px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .section-title{
+    font-size:24px;
+  }
+
+  .experience-card{
+    padding:22px;
+  }
+
+  .company-name{
+    font-size:18px;
+  }
+
+  .duration{
+    font-size:13px;
+  }
+
+  .experience-list li{
+    font-size:13px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .experience-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .duration{
+    font-size:12px;
+  }
+
 }

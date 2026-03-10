@@ -43,4 +43,9 @@ export class App {
       ? this.pages[this.currentIndex + 1]
       : null;
   }
+
+  closeSidebar(){
+    const sidebar = document.querySelector(".sidebar");
+    sidebar?.classList.remove("open");
+  }
 }

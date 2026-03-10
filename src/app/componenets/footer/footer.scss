@@ -1,20 +1,66 @@
-.social-icons a {
-  text-decoration: none;
-  transition: color 0.3s;
-  // color: var(--text-color);
+.footer{
+  border-top:var(--navbar-border);
+  box-shadow:var(--navbar-shadow);
+  background-color:var(--bg-color);
 }
 
-#github {
-  text-decoration: none;
+/* TEXT */
+
+.footer-text{
+  font-size:14px;
+  color:var(--text-color);
 }
 
-// .social-icons a:hover {
-//   // color: #ffc107; // Bootstrap warning color on hover
-//   color: var(--text-color);
-// }
+/* LINKS */
 
-.footer {
-  border-top: var(--navbar-border);
-  box-shadow: var(--navbar-shadow);
+.footer a{
+  text-decoration:none;
+  color:var(--text-color);
+  transition:0.3s;
 }
 
+.footer a:hover{
+  color:var(--highlight-color);
+}
+
+/* SOCIAL ICONS */
+
+.social-icons{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.social-icons a{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+
+@media (max-width:768px){
+
+  .footer-text{
+    font-size:13px;
+    line-height:1.5;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .footer-text{
+    font-size:12px;
+  }
+
+  .social-icons{
+    gap:15px;
+  }
+
+}

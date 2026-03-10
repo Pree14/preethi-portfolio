@@ -1,64 +1,115 @@
-.skills-section {
-  // background-color: #f8f9fa;
+.skills-section{
   background-color: var(--bg-color);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 32px;
-    position: relative;
+/* SECTION TITLE */
+
+.section-title{
+  font-weight:700;
+  font-size:32px;
+  position:relative;
 }
 
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: var(--highlight-color);
-  display: block;
-  margin: 8px;
+.section-title::after{
+  content:'';
+  width:60px;
+  height:3px;
+  background:var(--highlight-color);
+  display:block;
+  margin-top:8px;
 }
 
-.category-title {
-  font-weight: 600;
-  margin-bottom: 15px;
+/* CARD */
+
+.skill-card{
+  background-color:var(--card-bg);
+  border-radius:14px;
+  box-shadow:var(--shadow-color);
+  padding:30px;
 }
 
-.skill-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+/* GRID */
+
+.skill-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
 }
 
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  // background: #ffffff;
-  background-color: var(--bg-color);
-  padding: 10px 16px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-color);
-  transition: 0.3s ease;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid #0e67a6;
+/* SKILL ITEM */
+
+.skill-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background-color:var(--bg-color);
+  padding:10px 16px;
+  border-radius:8px;
+  box-shadow:var(--shadow-color);
+  transition:all 0.25s ease;
+  font-size:14px;
+  font-weight:500;
+  border:1px solid #0e67a6;
 }
 
-.skill-item i {
-  font-size: 16px;
-  // color: #0d6efd;
+/* ICON */
+
+.skill-item i{
+  font-size:18px;
 }
 
-.skill-item:hover {
-  transform: translateY(-3px);
+/* HOVER */
+
+.skill-item:hover{
+  transform:translateY(-3px);
 }
 
-.skill-card {
-  // background: #ffffff;
-  background-color: var(--card-bg);
-  border-radius: 14px;
-  box-shadow: var(--shadow-color);
-  transition: 0.3s ease;
-  position: relative;
-  padding: 30px;
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+
+@media (max-width:992px){
+
+  .section-title{
+    font-size:28px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .section-title{
+    font-size:24px;
+  }
+
+  .skill-card{
+    padding:22px;
+  }
+
+  .skill-item{
+    font-size:13px;
+    padding:8px 12px;
+  }
+
+  .skill-item i{
+    font-size:16px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .skill-grid{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .skill-item{
+    font-size:13px;
+    padding:8px 10px;
+  }
+
 }

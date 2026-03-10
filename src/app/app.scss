@@ -1,7 +1,10 @@
+/* ===============================
+   NAVIGATION LINKS
+================================ */
+
 .nav-link {
   font-size: 16px;
   font-weight: 500;
-  // color: #111;
   color: var(--text-color);
   text-decoration: none;
   transition: all 0.2s ease;
@@ -13,6 +16,15 @@
   transform: translateX(4px);
 }
 
+.nav-link.active {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Minimal navigation (Previous / Next buttons) */
+
 .nav-link-minimal {
   font-size: 16px;
   font-weight: 500;
@@ -22,32 +34,141 @@
 }
 
 .nav-link-minimal:hover {
-    letter-spacing: 5px;
-    opacity: 0.7;
+  letter-spacing: 5px;
+  opacity: 0.7;
 }
+
+
+/* ===============================
+   SIDEBAR (DESKTOP)
+================================ */
 
 .sidebar {
   width: 220px;
-  min-width: 220px;  
-  max-width: 220px;  
-  flex: 0 0 220px; 
-  // background-color: #bcb8b1; 
+  min-width: 220px;
+  max-width: 220px;
+  flex: 0 0 220px;
   background-color: var(--bg-color);
 }
 
-.nav-link{
-  // color: #003459;
-  // color: #0e67a6;
-  color: var(--text-color);
-}
-
-.nav-link.active {
-  background-color: var(--hover-color);
-  color: var(--text-color);
-  font-weight: 600;
-  border-radius: 10px;
+.sidebar .nav {
+  gap: 8px;
 }
 
 .sidebar .nav-item {
   margin-bottom: 5px;
+}
+
+
+/* ===============================
+   MAIN LAYOUT
+================================ */
+
+.layout-wrapper {
+  display: flex;
+  padding-top: 55px;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  /* Layout becomes vertical */
+  .layout-wrapper {
+    flex-direction: column;
+    padding-top: 55px;
+  }
+
+  /* Sidebar becomes slide menu */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 220px;
+    height: 100%;
+    z-index: 2000;
+    transition: left 0.3s ease;
+    background: var(--card-bg);
+    padding-top: 70px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  /* Sidebar open state */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Sidebar title */
+  .sidebar h5 {
+    text-align: center;
+  }
+
+  /* Sidebar navigation layout */
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  /* Nav links mobile size */
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .nav-link:hover {
+    background-color: var(--hover-color);
+    border-radius: 10px;
+    transform: translateX(4px);
+  }
+
+  /* Main content padding */
+  main {
+    padding: 20px;
+  }
+
+}
+
+/* Overlay background */
+
+.sidebar-overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.4);
+  z-index:1500;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+}
+
+.sidebar.open + .sidebar-overlay{
+  opacity:1;
+  visibility:visible;
+}
+
+@media (max-width:768px){
+
+  .sidebar{
+    position: fixed;
+    top:0;
+    left:-260px;
+    width:220px;
+    height:100%;
+    z-index:2000;
+    transition:left 0.3s ease;
+    background:var(--card-bg);
+    padding-top:70px;
+  }
+
+  .sidebar.open{
+    left:0;
+  }
+
 }

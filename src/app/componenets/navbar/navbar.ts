@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
@@ -36,4 +36,9 @@ export class Navbar implements OnInit{
       localStorage.setItem('theme', 'light');
     }
   }
+
+  toggleSidebar(){
+  const sidebar = document.getElementById("sidebarMenu");
+  sidebar?.classList.toggle("open");
+}
 }

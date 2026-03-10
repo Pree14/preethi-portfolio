@@ -1,49 +1,69 @@
-<section class="contact-section container py-1">
+<section class="contact-section container py-3">
 
-<h2 class="contact-title mb-5">Contact</h2>
+  <h2 class="contact-title mb-4 mb-md-5">Contact</h2>
 
-<div *ngIf="showMessage" class="custom-alert" [ngClass]="{
-       'success-alert': messageType === 'success',
-       'error-alert': messageType === 'error'
-     }">
-  {{ message }}
-</div>
+  <!-- <div class="row justify-content-center"> -->
+    <!-- <div class="col-lg-8 col-xl-7"> -->
+      <div class="p-md-1">
+      <div *ngIf="showMessage" class="custom-alert" [ngClass]="{
+           'success-alert': messageType === 'success',
+           'error-alert': messageType === 'error'}">
+        {{ message }}
+        <button class="close-btn" (click)="closeAlert()"><i class="bi bi-x-lg"></i></button>
+      </div>
 
-<form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" novalidate class="contact-form">
-<label>Name <span class="required">*</span></label>
-  <input type="text" name="user_name" #name="ngModel" ngModel required minlength="3" placeholder="Your Name" class="form-control mb-1">
+      <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" novalidate class="contact-form">
 
-  <div class="text-danger mb-3" *ngIf="name.invalid && name.touched">
-      <small *ngIf="name.errors?.['required']">Name is required</small>
-      <small *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</small>
-  </div>
-  <label>Email <span class="required">*</span></label>
-  <input type="email" name="user_email" #email="ngModel" ngModel required email placeholder="Where can I reach you back?" class="form-control mb-1">
+        <!-- Name -->
+        <label>Name <span class="required">*</span></label>
+        <input type="text" name="user_name" #name="ngModel" ngModel
+               required minlength="3"
+               placeholder="Your Name"
+               class="form-control mb-1">
 
-  <div class="text-danger mb-3" *ngIf="email.invalid && email.touched">
-      <small *ngIf="email.errors?.['required']">Email is required</small>
-      <small *ngIf="email.errors?.['email']">Enter a valid email</small>
-  </div>
-<label>Message <span class="required">*</span></label>
-  <textarea name="message" #msg="ngModel" ngModel required minlength="10" placeholder="Your Message" class="form-control mb-1"></textarea>
+        <div class="text-danger mb-3" *ngIf="name.invalid && name.touched">
+          <small *ngIf="name.errors?.['required']">Name is required</small>
+          <small *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</small>
+        </div>
 
-  <div class="text-danger mb-3" *ngIf="msg.invalid && msg.touched">
-      <small *ngIf="msg.errors?.['required']">Message is required</small>
-      <small *ngIf="msg.errors?.['minlength']">
-        Message must be at least 10 characters
-      </small>
-  </div>
+        <!-- Email -->
+        <label>Email <span class="required">*</span></label>
+        <input type="email" name="user_email" #email="ngModel" ngModel
+               required email
+               placeholder="Where can I reach you back?"
+               class="form-control mb-1">
 
-  <div class="d-flex gap-2">
+        <div class="text-danger mb-3" *ngIf="email.invalid && email.touched">
+          <small *ngIf="email.errors?.['required']">Email is required</small>
+          <small *ngIf="email.errors?.['email']">Enter a valid email</small>
+        </div>
 
-    <button type="submit" class="btn btn-primary w-50" [disabled]="contactForm.invalid">
-      Send Message
-    </button>
+        <!-- Message -->
+        <label>Message <span class="required">*</span></label>
+        <textarea name="message" #msg="ngModel" ngModel
+                  required minlength="10"
+                  placeholder="Your Message"
+                  class="form-control mb-1"></textarea>
 
-    <button type="button" class="btn btn-outline-secondary w-50" (click)="contactForm.reset()">
-      Reset
-    </button>
+        <div class="text-danger mb-3" *ngIf="msg.invalid && msg.touched">
+          <small *ngIf="msg.errors?.['required']">Message is required</small>
+          <small *ngIf="msg.errors?.['minlength']">Message must be at least 10 characters</small>
+        </div>
 
-  </div>
-</form>
+        <!-- Buttons -->
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+            Send Message
+          </button>
+
+          <button type="button" class="btn btn-outline-secondary" (click)="contactForm.reset()">
+            Reset
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  <!-- </div> -->
+
 </section>

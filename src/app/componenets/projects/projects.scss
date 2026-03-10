@@ -1,52 +1,113 @@
-.projects-section {
-  // background-color: #f8f9fa;
+.projects-section{
   background-color: var(--bg-color);
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 32px;
-  position: relative;
+/* SECTION TITLE */
+
+.section-title{
+  font-weight:700;
+  font-size:32px;
+  position:relative;
 }
 
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 3px;
-  background: var(--highlight-color);
-  display: block;
-  margin: 8px;
+.section-title::after{
+  content:'';
+  width:60px;
+  height:3px;
+  background:var(--highlight-color);
+  display:block;
+  margin-top:8px;
 }
 
-.project-card {
-  // background: #ffffff;
-  background-color: var(--card-bg);
-  border-radius: 14px;
-  box-shadow: var(--shadow-color);
-  transition: all 0.3s ease;
+/* PROJECT CARD */
+
+.project-card{
+  background-color:var(--card-bg);
+  border-radius:14px;
+  box-shadow:var(--shadow-color);
+  transition:all 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
+.project-card:hover{
+  transform:translateY(-8px);
 }
 
-.project-title {
-  font-weight: 600;
-  margin-bottom: 4px;
+/* TEXT */
+
+.project-title{
+  font-weight:600;
+  margin-bottom:4px;
 }
 
-.project-subtitle {
-  // color: gray;
-  color: var(--text-color);
-  font-size: 14px;
-  margin-bottom: 15px;
+.project-subtitle{
+  color:var(--text-color);
+  font-size:14px;
+  margin-bottom:15px;
 }
 
-.project-list {
-  padding-left: 18px;
+/* TECH STACK */
+
+.tech-stack{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
-.project-list li {
-  margin-bottom: 8px;
-  font-size: 14px;
+/* PROJECT LIST */
+
+.project-list{
+  padding-left:18px;
+}
+
+.project-list li{
+  margin-bottom:8px;
+  font-size:14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:992px){
+
+  .section-title{
+    font-size:28px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .section-title{
+    font-size:24px;
+  }
+
+  .project-title{
+    font-size:18px;
+  }
+
+  .project-subtitle{
+    font-size:13px;
+  }
+
+  .project-list li{
+    font-size:13px;
+  }
+
+  .project-card{
+    padding:20px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .section-title{
+    font-size:22px;
+  }
+
+  .project-card{
+    padding:18px;
+  }
+
 }

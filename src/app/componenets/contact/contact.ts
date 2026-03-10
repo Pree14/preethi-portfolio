@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, ChangeDetectorRef } from '@angular/core';
 import emailjs from '@emailjs/browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -15,39 +15,46 @@ export class Contact {
   messageType: string = "";
   showMessage: boolean = false;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone, private cd: ChangeDetectorRef) {}
 
   sendEmail(form: any) {
 
     emailjs.send(
-      'service_4bqhl0n',      // replace
-      'template_iv357qo',     // replace
+      'service_4bqhl0n',
+      'template_iv357qo',
       form.value,
-      '3S9tfeyT1_yDBzBxn'      // replace
+      '3S9tfeyT1_yDBzBxn'
     ).then(() => {
 
       this.message = "Message Sent Successfully!";
       this.messageType = "success";
       this.showMessage = true;
-      this.ngZone.run(() => {
-        setTimeout(() => {
+
+      this.cd.detectChanges();
+
+      setTimeout(() => {
         this.showMessage = false;
-        }, 1000);
-      })
-    form.reset();
+        this.cd.detectChanges();
+      }, 3000);
+
+      form.reset();
 
     }).catch((error) => {
       console.log("Error Message",error);
       this.message = "Failed to send message";
       this.messageType = "error";
       this.showMessage = true;
-      this.ngZone.run(() => {
+      this.cd.detectChanges();
         setTimeout(() => {
         this.showMessage = false;
-        }, 1000);
-      })
+        this.cd.detectChanges
+        }, 3000);
     });
 
   }
+
+  closeAlert() {
+  this.showMessage = false;
+}
 }
 

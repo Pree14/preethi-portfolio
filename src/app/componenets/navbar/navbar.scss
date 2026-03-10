@@ -3,6 +3,12 @@
     color: var(--text-color) !important;
     box-shadow: var(--navbar-shadow) !important;
     border-bottom: var(--navbar-border) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
 }
 
 .navbar .navbar-brand,
@@ -17,11 +23,19 @@
   cursor: pointer;
   padding: 6px 12px;
   border-radius: 50px;
-  transition: 0.3s;
+  transition: all 0.1s ease;
   color: var(--text-color);
 }
 
 .theme-toggle:hover {
   background: var(--highlight-color);
   color: var(--text-color);
+}
+
+.sidebar-toggle{
+  font-size:28px;
+  background:none;
+  border:none;
+  color:var(--text-color);
+  cursor:pointer;
 }
