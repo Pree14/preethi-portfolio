@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [ CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
@@ -22,7 +21,7 @@ export class Navbar implements OnInit{
   }
 
   pdfDownload(){
-    window.open('assets/Preethi_AngularDeveloper_wrong.pdf', '_blank');
+    window.open('assets/Preethi_FullStackDeveloper.pdf', '_blank');
   }
 
   toggleTheme() {
