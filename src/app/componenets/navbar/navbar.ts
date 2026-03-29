@@ -21,7 +21,7 @@ export class Navbar implements OnInit{
   }
 
   pdfDownload(){
-    window.open('assets/Preethi_FullStackDeveloper.pdf', '_blank');
+    window.open('assets/Preethi_AngularDeveloper.pdf', '_blank');
   }
 
   toggleTheme() {
