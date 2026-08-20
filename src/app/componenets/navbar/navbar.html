@@ -14,19 +14,19 @@
     <ul class="navbar-nav ms-auto flex-row align-items-center gap-3">
 
       <li>
-        <button class="theme-toggle" (click)="toggleTheme()">
+        <button class="theme-toggle" (click)="toggleTheme()" title="Change Theme">
           <i class="bi" [ngClass]="isDark ? 'bi-sun' : 'bi-moon'"></i>
         </button>
       </li>
 
-      <li>
+      <!-- <li>
         <a class="nav-link" href="https://www.linkedin.com/in/preethi-c-01592235a" target="_blank">
           LinkedIn
         </a>
-      </li>
+      </li> -->
 
       <li>
-        <a class="nav-link" (click)="pdfDownload()" style="cursor:pointer">
+        <a class="nav-link" (click)="pdfDownload()" style="cursor:pointer" title="Download Resume">
           <i class="bi bi-download"></i>
         </a>
       </li>
